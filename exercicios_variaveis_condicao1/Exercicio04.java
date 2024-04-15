@@ -1,26 +1,27 @@
-package exercicio04;
+package com.mycompany.exercicio4;
 
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class Exercicio04 {
 
     public static void main(String[] args) {
-        System.out.println("Exercício 4");
+        System.out.println("== Exercício 04 ==");
         
-        int lado;
-        int altura;
-        int area;
+        double lado;
+        double altura;
+        double area;
         
-        Scanner teclado = new Scanner(System.in);
+        Scanner resposta = new Scanner(System.in);
+        DecimalFormat df = new DecimalFormat("#.##");
         
-        System.out.println("Insira o lado do retângulo");
-        lado = teclado.nextInt();
+        System.out.println("\nInsira o lado do retângulo");
+        lado = resposta.nextDouble();
         System.out.println("Insira a altura do retângulo");
-        altura = teclado.nextInt();
+        altura = resposta.nextDouble();
         
         area = lado * altura;
         
-        System.out.println("A área do retângulo é " + area);
+        System.out.println("\nA área do retângulo é: " + area);
     }
-    
 }

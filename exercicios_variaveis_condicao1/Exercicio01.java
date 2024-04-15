@@ -1,33 +1,36 @@
-package exercicio01;
+package com.mycompany.exercicio1;
 
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class Exercicio01 {
 
     public static void main(String[] args) {
-        System.out.println("Exercício 01");
+        System.out.println("== Exercício 01 ==");
         
-        int num1;
-        int num2;
-        int numsoma;
-        int numsub;
-        int nummult;
-        int numdiv;
+        double num1;
+        double num2;
+        double soma;
+        double sub;
+        double mult;
+        double div;
         
-        Scanner teclado = new Scanner(System.in);
+        Scanner resposta = new Scanner(System.in);
+        DecimalFormat df = new DecimalFormat("#.##");
         
-        System.out.println("Insira um número");
-        num1 = teclado.nextInt();
-        System.out.println("Insira outro número");
-        num2 = teclado.nextInt();
+        System.out.println("\nDigite um número");
+        num1 = resposta.nextDouble();
+        System.out.println("Digite outro número");
+        num2 = resposta.nextDouble();
         
-        numsoma = num1 + num2;
-        numsub = num1 - num2;
-        nummult = num1*num2;
-        numdiv = num1/num2;
+        soma = num1 + num2;
+        sub = num1 - num2;
+        mult = num1 * num2;
+        div = num1 / num2;
         
-        System.out.println("A soma entre esses números é " + numsoma + ", a subtração entre esses números é " + numsub + ", a multiplicação entre esses números é " + nummult + ", a divisão entre esses números é " + numdiv);
-        
+        System.out.println("\nA soma entre esses números é: " + df.format(soma));
+        System.out.println("A subtração etnre esses números é: " + df.format(sub));
+        System.out.println("A multiplicação entre esses números é: " + df.format(mult));
+        System.out.println("A divisão entre esses números é: " + df.format(div));
     }
-    
 }

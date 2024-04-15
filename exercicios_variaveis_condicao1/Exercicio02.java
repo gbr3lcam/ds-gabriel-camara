@@ -1,26 +1,29 @@
-package exercicio02;
+
+package com.mycompany.exercicio2;
 
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class Exercicio02 {
 
     public static void main(String[] args) {
-        System.out.println("Exercícios 02");
+        System.out.println("== Exercício 02 ==");
         
-        int distancia;
-        int litros;
-        int media;
+        double distancia;
+        double litros;
+        double media;
         
-        Scanner teclado = new Scanner(System.in);
+        Scanner resposta = new Scanner(System.in);
+        DecimalFormat df = new DecimalFormat("#.##");
         
-        System.out.println("Qual a distância que você percorreu com o seu carro? (em Km)");
-        distancia = teclado.nextInt();
-        System.out.println("Quantos litros você usou na viagem ");
-        litros = teclado.nextInt();
+        System.out.println("\nDigite a distância total percorrida (em km): ");
+        distancia = resposta.nextDouble();
+        System.out.println("Digite o total de combustível gasto (em litros): ");
+        litros = resposta.nextDouble();
         
         media = distancia/litros;
         
-        System.out.println("A média de consumo do seu carro é (aproximadamente): " + media);
+        System.out.println("\nA média de consumo do seu carro é de: " + df.format(media) + " km/1.");
         
     }
     
