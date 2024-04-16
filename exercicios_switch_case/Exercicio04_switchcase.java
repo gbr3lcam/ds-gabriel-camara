@@ -21,26 +21,34 @@ public class Exercicio04_switchcase {
         System.out.println("Insira a quantidade");
         quant = resposta.nextInt();
         
-        if (cod == 100){
-            preco = (double) quant*1.70;
+        
+        switch (cod){
+            case 100:
+                preco = (double) quant*1.70;
             System.out.println("\nValor total: R$" + df.format(preco));
-        } else if (cod == 101){
-            preco = (double) quant*2.30;
+                break;
+            case 101:
+                preco = (double) quant*2.30;
             System.out.println("\nValor total: R$" + df.format(preco));
-        } else if (cod == 102) {
-            preco = (double) quant*2.60;
+                break;
+            case 102:
+                preco = (double) quant*2.60;
             System.out.println("\nValor total: R$" + df.format(preco));
-        } else if (cod == 103) {
-            preco = (double) quant*2.40;
+                break;
+            case 103:
+                preco = (double) quant*2.40;
             System.out.println("\nValor total: R$" + df.format(preco));
-        } else if (cod == 104) {
-            preco = (double) quant*2.50;
+                break;
+            case 104:
+                preco = (double) quant*2.50;
             System.out.println("\nValor total: R$" + df.format(preco));
-        } else if (cod == 105) {
-            preco = quant*1;
+                break;
+            case 105:
+                preco = quant*1;
             System.out.println("\nValor total: R$" + df.format(preco));
-        } else {
-            System.out.println("\nCódigo inválido");
+                break;
+            default:
+                System.out.println("\nCódigo inválido");               
         }
     }
 }

@@ -12,18 +12,34 @@ public class Exercicio01_switchcase {
         System.out.println("\nInsira o código do produto");
         int cod = resposta.nextInt();
         
-        if (cod == 1) {
-            System.out.println("Classificação: Alimento não perecível");
-        } else if (cod >= 2 && cod <= 4){
-            System.out.println("Classificação: Alimento perecível");
-        } else if (cod == 5 || cod == 6){
-            System.out.println("Classificação: Vestuário");
-        } else if (cod == 7){
-            System.out.println("Classificação: Higiene Pessoal");
-        } else if (cod >= 8 && cod <= 15) {
-            System.out.println("Classificação: Limpeza e Utensílios Domésticos");
-        } else {
-            System.out.println("Código inválido");
+        switch (cod) {
+            case 1:
+                System.out.println("Classificação: Alimento não-perecível");
+                break;
+            case 2:
+            case 3:
+            case 4:
+                System.out.println("Classificação: Alimento perecível");
+                break;
+            case 5:
+            case 6:
+                System.out.println("Classificação: Vestuário");
+                break;
+            case 7:
+                System.out.println("Classificação: Higiene Pessoal");
+                break;
+            case 8:
+            case 9:
+            case 10:
+            case 11:
+            case 12:
+            case 13:
+            case 14:
+            case 15:
+                System.out.println("Classificação: Limpeza e Utensílios Domésticos");
+                break;
+            default:
+                System.out.println("Código inválido");
         }
         
         }

@@ -23,17 +23,29 @@ public class Exercicio02_switchcase {
         
         media = (nota1+nota2)/2;
         
-        if (media >= 0 && media <= 4.0) {
-            System.out.println("\nMédia: " + df.format(media));
+        switch ((int) media) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                System.out.println("\nMédia: " + df.format(media));
             System.out.println("Status: Reprovado");
-        } else if (media >= 4.1 && media <=7.0) {
-            System.out.println("\nMédia: " + df.format(media));
+                break;
+            case 5:
+            case 6:
+            case 7:
+                System.out.println("\nMédia: " + df.format(media));
             System.out.println("Status: Exame");
-        } else if (media >= 7.1 && media <=10){
-            System.out.println("\nMédia: " + df.format(media));
+                break;
+            case 8:
+            case 9:
+            case 10:
+                System.out.println("\nMédia: " + df.format(media));
             System.out.println("Status: Aprovado");
-        } else {
-            System.out.println("Valores inválidos.");
+                break;
+            default:
+                System.out.println("Valores inválidos.");
         }
     }
 }

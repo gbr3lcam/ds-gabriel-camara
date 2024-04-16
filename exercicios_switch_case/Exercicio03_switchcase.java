@@ -23,20 +23,25 @@ public class Exercicio03_switchcase {
         System.out.println("O que você quer fazer com esses números?\n1 - Calcular a média\n2 - Calcular a diferença\n3 - Calcular o produto\n4 - Calcular a divisão");
         opt = resposta.nextInt();
         
-        if (opt == 1) {
-            calc = (num1+num2)/2;
+        switch (opt) {
+            case 1:
+                calc = (num1+num2)/2;
             System.out.println("\nMédia: " + df.format(calc));
-        } else if (opt == 2) {
-            calc = num1-num2;
+                break;
+            case 2:
+                calc = num1-num2;
             System.out.println("\nDiferença: " + df.format(calc));
-        } else if (opt == 3) {
-            calc = num1*num2;
+                break;
+            case 3:
+                calc = num1*num2;
             System.out.println("\nProduto: " + df.format(calc));
-        } else if (opt == 4) {
-            calc = num1/num2;
+                break;
+            case 4:
+                calc = num1/num2;
             System.out.println("\nDivisão: " + df.format(calc));
-        } else {
-            System.out.println("\nOpção inválida");
+                break;
+            default:
+                System.out.println("\nOpção inválida");
         }
     }
 }
